@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "categoria": "salgados",
+    "nome": "Pastel Carne",
+    "desc": "Carne moída bem temperada",
+    "preco": 16.90,
+    "badge": "Mais Pedido",
+    "img": "imagens/pastel-carne.jpg"
+  },
+  {
+    "id": 2,
+    "categoria": "salgados",
+    "nome": "Pastel Carne c/Queijo",
+    "desc": "Carne moída bem temperada com um queijo derretido com puro sabor",
+    "preco": 19.90,
+    "badge": "Famoso",
+    "img": "imagens/pastel-carne-queijo.jpg"
+  },
+  {
+    "id": 3,
+    "categoria": "salgados",
+    "nome": "Pastel Frango, Catupiry e milho",
+    "desc": "Peito de frango desfiado suculento com o verdadeiro Catupiry original, junto com milho",
+    "preco": 19.90,
+    "badge": "Tradicional",
+    "img": "imagens/pastel-frango1.jpg"
+  },
+  {
+    "id": 4,
+    "categoria": "salgados",
+    "nome": "Pastel Queijo Mussarela",
+    "desc": "Mussarela premium derretida de ponta a ponta.",
+    "preco": 16.90,
+    "badge": "Sem Carne",
+    "img": "imagens/pastel-queijo.jpg"
+  },
+  {
+    "id": 5,
+    "categoria": "salgados",
+    "nome": "Pastel de Pizza",
+    "desc": "Presunto magro, queijo mussarela, tomate fresco picadinho e orégano.",
+    "preco": 19.90,
+    "badge": "Saboroso",
+    "img": "imagens/pastel-pizza.jpg"
+  },
+  {
+    "id": 15,
+    "categoria": "salgados",
+    "nome": "Pastel Palmito, Frango e Queijo",
+    "desc": "Palmito macio em pedaços selecionados com queijo derretido e um frango desfiado suculento.",
+    "preco": 22.90,
+    "badge": "Top de linha",
+    "img": "imagens/pastel-palmito1.jpg"
+  },
+  {
+    "id": 6,
+    "categoria": "doces",
+    "nome": "Pastel Brigadeiro com Morango",
+    "desc": "Brigadeiro caseiro saboroso com morangos frescos fatiados.",
+    "preco": 24.90,
+    "badge": "Sucesso Doce",
+    "img": "imagens/pastel-brigadeiro.jpg"
+  },
+  {
+    "id": 7,
+    "categoria": "doces",
+    "nome": "Pastel Romeu e Julieta",
+    "desc": "Goiabada cremosa cascão combinada com queijo minas frescal.",
+    "preco": 16.90,
+    "badge": "Clássico",
+    "img": "imagens/pastel-romeu.jpg"
+  },
+  {
+    "id": 8,
+    "categoria": "doces",
+    "nome": "Pastel Banana com Canela",
+    "desc": "Banana nanica fatiada e canela polvilhada.",
+    "preco": 12.90,
+    "badge": "Delícia",
+    "img": "imagens/pastel-banana.jpg"
+  },
+  {
+    "id": 9,
+    "categoria": "minis",
+    "nome": "Porção 10 Mini Pastéis + Molho Pimenta",
+    "desc": "Sabor sortido (Carne, Queijo, Presunto c/queijo e Frango). Acompanha molho artesanal da casa.",
+    "preco": 29.90,
+    "badge": "Porção",
+    "img": "imagens/pastel-mini10.jpg"
+  },
+  {
+    "id": 10,
+    "categoria": "minis",
+    "nome": "Porção 20 Mini Pastéis + 2 Molhos",
+    "desc": "Ideal para compartilhar em dupla. Acompanha pimenta e maionese verde.",
+    "preco": 51.90,
+    "badge": "Galera",
+    "img": "imagens/pastel-mini20.jpg"
+  },
+  {
+    "id": 11,
+    "categoria": "minis",
+    "nome": "Porção 30 Mini Pastéis (Combo Festa)",
+    "desc": "A porção perfeita para reuniões. Sabores variados com acompanhamento.",
+    "preco": 74.90,
+    "badge": "Festa",
+    "img": "imagens/pastel-mini30.jpg"
+  },
+  {
+    "id": 12,
+    "categoria": "bebidas",
+    "nome": "Sucos Naturais e Polpa (500 ml)",
+    "desc": "Feito na hora, docinho e gostoso. Do jeito que o cliente pedir.",
+    "preco": 12.90,
+    "badge": "Fresco na Hora",
+    "img": "imagens/sucos.jpg"
+  },
+  {
+    "id": 13,
+    "categoria": "bebidas",
+    "nome": "Caçulinha",
+    "desc": "Feito para as crianças e saborosa",
+    "preco": 3.50,
+    "badge": "Especial",
+    "img": "imagens/caculinha.jpg"
+  },
+  {
+    "id": 14,
+    "categoria": "bebidas",
+    "nome": "Refrigerante Lata 350ml",
+    "desc": "Coca-Cola, Guaraná Antarctica ou Fanta Laranja geladíssimos.",
+    "preco": 7.00,
+    "badge": "Gelado",
+    "img": "imagens/refri.jpg"
+  }
+]

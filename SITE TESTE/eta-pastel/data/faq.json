@@ -1,0 +1,37 @@
+[
+  {
+    "pergunta": "Quais sabores de pastel vocês têm?",
+    "keywords": ["sabor", "sabores", "cardapio", "pastel", "pasteis", "menu", "opcoes", "recheio"],
+    "resposta": "Temos pastéis gigantes de 30cm de **Carne Especial, Frango com Catupiry, Queijo Duplo, Bauru Supremo e Palmito**, além dos doces (**Nutella com Morango, Romeu e Julieta e Banana com Doce de Leite**) e porções de **Mini Pastéis**!"
+  },
+  {
+    "pergunta": "Qual o tamanho e preço dos pastéis?",
+    "keywords": ["preco", "valor", "quanto", "custa", "tamanho", "grande", "30cm"],
+    "resposta": "Nossos pastéis gigantes têm **30 cm reais** com recheio de ponta a ponta, custando entre **R$ 18,50 e R$ 24,90**. Você pode conferir todos os valores no cardápio acima!"
+  },
+  {
+    "pergunta": "Vocês têm sucos e bebidas?",
+    "keywords": ["suco", "sucos", "bebida", "bebidas", "refrigerante", "caldo", "cana", "tomar", "beber"],
+    "resposta": "Sim! Temos **Sucos Naturais (500 ml)** feitos na hora (Laranja, Abacaxi c/ Hortelã, Acerola, Manga, Limonada Suíça e mais), **Caldo de Cana (1L)** e refrigerantes em lata."
+  },
+  {
+    "pergunta": "Qual o horário de funcionamento?",
+    "keywords": ["horario", "hora", "aberto", "abre", "fecha", "funcionamento", "dia", "dias"],
+    "resposta": "Funcionamos de **Terça a Domingo, das 16h00 às 23h30** (fechado às segundas-feiras)."
+  },
+  {
+    "pergunta": "Vocês fazem entrega / delivery?",
+    "keywords": ["entrega", "delivery", "ifood", "99", "pedir", "pedido", "whatsapp", "taxa"],
+    "resposta": "Entregamos sim! Monte seu carrinho aqui no site e envie direto para o nosso **WhatsApp (19) 99909-2169**, ou peça pelo **iFood** e **99 Food**."
+  },
+  {
+    "pergunta": "Onde fica a pastelaria?",
+    "keywords": ["onde", "endereco", "local", "localizacao", "rua", "bairro", "chegar", "loja"],
+    "resposta": "Temos 2 unidades em Campinas: **Loja 1 (Matriz)** na Rua Adão Soares da Silva, 347 - Jd. Monte Cristo (em frente à creche Douglas Andreani) e **Loja 2 (Centro Delivery)** na Av. Amílton Alves de Souza, 400 - Jd. Nossa Sra. de Lourdes."
+  },
+  {
+    "pergunta": "Vocês fazem encomendas para festas?",
+    "keywords": ["festa", "evento", "encomenda", "b2b", "empresa", "aniversario", "mini"],
+    "resposta": "Fazemos sim! Use a **Calculadora de Festa** aqui no site para estimar a quantidade de mini pastéis e bebidas e envie sua cotação pelo WhatsApp."
+  }
+]

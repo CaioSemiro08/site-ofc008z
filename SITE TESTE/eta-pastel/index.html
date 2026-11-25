@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Êta Pastel - O Pastel Mais Recheado de Campinas! Pastéis gigantes de 30 cm, massa crocante e sequinha de ponta a ponta. Peça pelo WhatsApp ou visite nossa matriz no Jd. Monte Cristo.">
+    <title>Êta Pastel | O Pastel Gigante de 30cm Mais Recheado de Campinas - SP</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilo Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- BANNER DE COOKIES -->
+    <div id="banner-cookies" class="banner-cookies">
+        <p>Utilizamos cookies para personalizar sua experiência. Ao continuar navegando, você concorda com a nossa <a href="politica.html" class="cookie-policy-link">Política de Privacidade</a>.</p>
+        <button id="btn-aceitar-cookies" class="btn-cookies">Entendi e Aceito</button>
+    </div>
+
+    <!-- CHATBOT FLUTUANTE (POSICIONADO À ESQUERDA PARA NÃO COLIDIR COM O CARRINHO) -->
+    <button id="chat-toggle" aria-label="Abrir chat de dúvidas">🥟 Tirar Dúvidas</button>
+
+    <div id="chat-box" class="oculto">
+        <div id="chat-header">
+            <div class="chat-header-info">
+                <img src="imagens/mascote.jpg" alt="Pasteleirinho" onerror="this.style.display='none'">
+                <span>Atendente Êta Pastel</span>
+            </div>
+            <button id="chat-close" aria-label="Fechar chat">✖</button>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Digite sua dúvida...">
+            <button id="chat-send">Enviar</button>
+        </div>
+    </div>
+
+    <!-- TOP BAR DE INFORMAÇÕES RÁPIDAS -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Rua Adão Soares da Silva, 347 (Em frente à creche Douglas Andreani)</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Terça a Domingo: 16h às 23h30</span>
+                </div>
+            </div>
+            <div class="top-bar-info">
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-wheelchair"></i>
+                    <span>Acessibilidade Universal na Matriz</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / STICKY NAVBAR -->
+    <header class="sticky-navbar">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo-wrapper">
+                <div class="logo-box">
+                    <div class="brand-name">ÊTA PASTEL</div>
+                    <div class="brand-sub">Campinas • SP</div>
+                </div>
+                <span class="badge-since">Desde 2021</span>
+            </a>
+
+            <!-- NAVEGAÇÃO PRINCIPAL COM SUBMENU (LISTA ENCADEADA) -->
+            <nav class="desktop-nav" aria-label="Menu Principal">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#cardapio">Cardápio <i class="fa-solid fa-chevron-down submenu-caret"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#cardapio" data-filter-link="todos">Todos os Sabores</a></li>
+                            <li><a href="#cardapio" data-filter-link="salgados">Salgados (30cm)</a></li>
+                            <li><a href="#cardapio" data-filter-link="doces">Doces Especiais</a></li>
+                            <li><a href="#cardapio" data-filter-link="minis">Mini Pastéis</a></li>
+                            <li><a href="#cardapio" data-filter-link="bebidas">Sucos e Bebidas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#fotos">Fotos Reais</a></li>
+                    <li><a href="#historia">Nossa História</a></li>
+                    <li><a href="#encomendas">Encomendas B2B</a></li>
+                    <li><a href="politica.html">Privacidade</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/5519999092169?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido!" 
+                   target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-whatsapp btn-nav-cta">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Pedir Agora</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER MENU -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-content">
+            <div>
+                <button class="drawer-close" id="drawerClose" aria-label="Fechar Menu"><i class="fa-solid fa-xmark"></i></button>
+                <div class="logo-box" style="margin-top: 10px;">
+                    <div class="brand-name">ÊTA PASTEL</div>
+                    <div class="brand-sub">O Original de 30cm</div>
+                </div>
+                <ul class="mobile-nav-list">
+                    <li><a href="#inicio" class="mobile-link">Início</a></li>
+                    <li><a href="#cardapio" class="mobile-link">Cardápio</a></li>
+                    <li><a href="#fotos" class="mobile-link">Fotos Reais</a></li>
+                    <li><a href="#historia" class="mobile-link">Nossa História</a></li>
+                    <li><a href="#encomendas" class="mobile-link">Encomendas B2B</a></li>
+                    <li><a href="politica.html" class="mobile-link">Política de Privacidade</a></li>
+                    <li><a href="#contato" class="mobile-link">Contato</a></li>
+                </ul>
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="https://wa.me/5519999092169?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido!" 
+                   target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-whatsapp" style="width: 100%;">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Oficial
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL (<main>) -->
+    <main id="conteudo-principal">
+
+        <!-- 1. HERO SECTION (CONVERSÃO PRIMÁRIA) -->
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text-col">
+                    <div class="hero-badge">
+                        <span class="badge-pill">
+                            <i class="fa-solid fa-crown"></i> O Campeão do Recheio em Campinas
+                        </span>
+                    </div>
+                    
+                    <h1 class="hero-title">O PASTEL MAIS RECHEADO DE CAMPINAS!</h1>
+                    
+                    <p class="hero-subtitle">
+                        São mais de <strong>30 cm de puro sabor e fartura</strong> de ponta a ponta.
+                        <em>Massa artesanal crocante, sequinha e zero "vento"!</em> Experimente a verdadeira tradição gastronômica da cidade.
+                    </p>
+
+                    <div class="hero-features-list">
+                        <div class="feature-card">
+                            <i class="fa-solid fa-ruler-horizontal"></i>
+                            <span>Pastel Gigante 30 cm</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Recheio de Ponta a Ponta</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                            <span>Frito na Hora Sequinho</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas">
+                        <a href="#cardapio" class="btn btn-yellow btn-hero-primary">
+                            <i class="fa-solid fa-utensils"></i> MONTAR PEDIDO NO CARDÁPIO
+                        </a>
+                        <a href="https://wa.me/5519999092169?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20pedido!" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn btn-outline">
+                            <i class="fa-brands fa-whatsapp"></i> Pedir Direto no WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="marketplaces-wrapper">
+                        <div class="marketplaces-title">Ou peça pelos nossos parceiros de delivery:</div>
+                        <div class="marketplaces-badges">
+                            <a href="https://www.ifood.com.br" target="_blank" rel="noopener noreferrer" class="mp-badge ifood">
+                                <i class="fa-solid fa-bag-shopping"></i> iFood
+                            </a>
+                            <a href="https://www.99app.com/99food/" target="_blank" rel="noopener noreferrer" class="mp-badge ninenine">
+                                <i class="fa-solid fa-motorcycle"></i> 99 Food
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <div class="hero-img-card">
+                        <div class="ruler-tag">
+                            <i class="fa-solid fa-ruler"></i> 30 CM REAL
+                        </div>
+                        <img src="imagens/pastel-tamanho.jpg" 
+                             alt="Pastel Gigante de 30cm Êta Pastel medido na régua"
+                             onerror="this.src='https://placehold.co/600x400/D32F2F/FFFFFF?text=Pastel+Gigante+30cm'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CARDÁPIO INTERATIVO LOGO EM SEGUIDA PARA CONVERSÃO RÁPIDA -->
+        <section id="cardapio" class="menu-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge-pill" style="margin-bottom: 10px;">Cardápio Completo</span>
+                    <h2>Escolha Seus Sabores Favoritos</h2>
+                    <p>Monte seu pedido agora mesmo. Adicione os itens ao carrinho e envie direto pelo WhatsApp!</p>
+                </div>
+
+                <!-- LISTA ORDENADA (<ol>) - PASSO A PASSO DO PEDIDO -->
+                <ol class="order-steps-list">
+                    <li><strong>1. Escolha os sabores</strong> clicando em adicionar</li>
+                    <li><strong>2. Revise seu carrinho</strong> no botão flutuante</li>
+                    <li><strong>3. Envie pelo WhatsApp</strong> com 1 clique</li>
+                </ol>
+
+                <div class="menu-tabs">
+                    <button class="tab-btn active" data-categoria="todos">Todos</button>
+                    <button class="tab-btn" data-categoria="salgados">Salgados (30cm)</button>
+                    <button class="tab-btn" data-categoria="doces">Doces Especial</button>
+                    <button class="tab-btn" data-categoria="minis">Mini Pastéis Porções</button>
+                    <button class="tab-btn" data-categoria="bebidas">Bebidas</button>
+                </div>
+
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Renderizado dinamicamente via js/app.js + data/cardapio.json -->
+                </div>
+
+                <!-- LINK DE DOWNLOAD DO CARDÁPIO (ATRIBUTO download) -->
+                <div class="menu-download-box">
+                    <a href="docs/cardapio-eta-pastel.pdf" download="Cardapio-Eta-Pastel.pdf" class="btn btn-outline btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Baixar Cardápio Completo (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. GALERIA DE PROVA SOCIAL COM LIGHTBOX (AMPLIA AO CLICAR) -->
+        <section id="fotos" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge-pill" style="margin-bottom: 10px;">Transparência Total • Clique para Ampliar</span>
+                    <h2>Fotos Reais dos Nossos Produtos</h2>
+                    <p>Clique em qualquer foto abaixo para ver os detalhes em tela cheia.</p>
+                </div>
+
+                <div class="strict-gallery-grid">
+                    <a href="#foto-tamanho" class="gallery-figure">
+                        <div class="gallery-img-box">
+                            <img src="imagens/pastel-tamanho.jpg" 
+                                 alt="Pastel gigante de 30cm real comparado com a régua Êta Pastel"
+                                 onerror="this.src='https://placehold.co/600x400/D32F2F/FFFFFF?text=Tamanho+Real+30cm'">
+                            <span class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar</span>
+                        </div>
+                        <div class="gallery-figcaption">
+                            Tamanho Real de 30 cm
+                            <small>Escala gigantesca comprovada na régua</small>
+                        </div>
+                    </a>
+
+                    <a href="#foto-recheio" class="gallery-figure">
+                        <div class="gallery-img-box">
+                            <img src="imagens/pastel-carne.jpg" 
+                                 alt="Pastel cortado ao meio mostrando recheio farto de carne sem ar"
+                                 onerror="this.src='https://placehold.co/600x400/D32F2F/FFFFFF?text=Recheio+Farto'">
+                            <span class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar</span>
+                        </div>
+                        <div class="gallery-figcaption">
+                            Recheio Transbordando
+                            <small>Validação da promessa: Zero pastel de vento!</small>
+                        </div>
+                    </a>
+
+                    <a href="#foto-sucos" class="gallery-figure">
+                        <div class="gallery-img-box">
+                            <img src="imagens/sucos.jpg" 
+                                 alt="Variedade de sucos naturais feitos na hora no Êta Pastel"
+                                 onerror="this.src='https://placehold.co/600x400/D32F2F/FFFFFF?text=Sucos+Naturais'">
+                            <span class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar</span>
+                        </div>
+                        <div class="gallery-figcaption">
+                            Sucos Naturais na Hora
+                            <small>Diversos sabores geladinhos para acompanhar</small>
+                        </div>
+                    </a>
+
+                    <a href="#foto-mascote" class="gallery-figure">
+                        <div class="gallery-img-box">
+                            <img src="imagens/mascote.jpg" 
+                                 alt="Mascote Pasteleirinho no balcão da Êta Pastel"
+                                 onerror="this.src='https://placehold.co/600x400/D32F2F/FFFFFF?text=Pasteleirinho'">
+                            <span class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar</span>
+                        </div>
+                        <div class="gallery-figcaption">
+                            Padrão Êta Pastel
+                            <small>Ingredientes selecionados e fritura na hora</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODAIS LIGHTBOX (100% CSS :target PARA AMPLIAR AS FOTOS) -->
+        <div class="lightbox" id="foto-tamanho">
+            <a href="#fechar" class="lightbox-overlay" aria-label="Fechar foto"></a>
+            <div class="lightbox-content">
+                <a href="#fechar" class="lightbox-close" aria-label="Fechar">&times;</a>
+                <img src="imagens/pastel-tamanho.jpg" alt="Pastel Gigante de 30cm Ampliado">
+                <p class="lightbox-caption">Tamanho Real de 30 cm — Massa crocante e sequinha</p>
+            </div>
+        </div>
+
+        <div class="lightbox" id="foto-recheio">
+            <a href="#fechar" class="lightbox-overlay" aria-label="Fechar foto"></a>
+            <div class="lightbox-content">
+                <a href="#fechar" class="lightbox-close" aria-label="Fechar">&times;</a>
+                <img src="imagens/pastel-carne.jpg" alt="Pastel de Carne Super Recheado Ampliado">
+                <p class="lightbox-caption">Recheio Transbordando — Zero pastel de vento!</p>
+            </div>
+        </div>
+
+        <div class="lightbox" id="foto-sucos">
+            <a href="#fechar" class="lightbox-overlay" aria-label="Fechar foto"></a>
+            <div class="lightbox-content">
+                <a href="#fechar" class="lightbox-close" aria-label="Fechar">&times;</a>
+                <img src="imagens/sucos.jpg" alt="Sucos Naturais Êta Pastel Ampliado">
+                <p class="lightbox-caption">Sucos Naturais (500 ml) feitos na hora</p>
+            </div>
+        </div>
+
+        <div class="lightbox" id="foto-mascote">
+            <a href="#fechar" class="lightbox-overlay" aria-label="Fechar foto"></a>
+            <div class="lightbox-content">
+                <a href="#fechar" class="lightbox-close" aria-label="Fechar">&times;</a>
+                <img src="imagens/mascote.jpg" alt="Mascote Pasteleirinho Ampliado">
+                <p class="lightbox-caption">Pasteleirinho — Garantia de qualidade Êta Pastel</p>
+            </div>
+        </div>
+
+        <!-- 4. STORYTELLING COM MASCOTE, VÍDEO & UNIDADES -->
+        <section id="historia" class="story-section">
+            <div class="container story-grid">
+                <div class="mascot-box">
+                    <div class="mascot-avatar">
+                        <img src="imagens/mascote.jpg" 
+                             alt="Pasteleirinho - Mascote Oficial Êta Pastel"
+                             onerror="this.style.display='none'">
+                    </div>
+                    <div class="mascot-name">Pasteleirinho</div>
+                    <div class="mascot-role">Mascote Oficial &amp; Mestre Pasteleiro</div>
+                    <p class="mascot-quote">
+                        "Garantia de recheio de ponta a ponta sem pastel de vento!"
+                    </p>
+
+                    <!-- LISTA DE DEFINIÇÃO (<dl>, <dt>, <dd>) -->
+                    <dl class="brand-specs-dl">
+                        <dt>Tamanho Padrão</dt>
+                        <dd>30 cm reais de ponta a ponta.</dd>
+                        <dt>Preparo Artesanal</dt>
+                        <dd>Frito na hora, <em>crocante e sequinho</em>.</dd>
+                        <dt>Sucos Naturais</dt>
+                        <dd>Garrafa de 500 ml batida no momento do pedido.</dd>
+                    </dl>
+                </div>
+
+                <div class="story-content">
+                    <h2>Conheça a Nossa História &amp; Estrutura</h2>
+                    <div class="story-speech-bubble">
+                        <p>
+                            "Olá! Eu sou o <strong>Pasteleirinho</strong>! Desde 2021, nossa missão em Campinas é acabar de vez com a decepção do 'pastel de vento'. Aqui no <strong>Êta Pastel</strong>, cada pastel é feito com carinho artesanal, <em>frito na hora em óleo novinho</em> e recheado de verdade até a última mordida!"
+                        </p>
+                    </div>
+
+                    <!-- ELEMENTO MULTIMÍDIA <video> INCORPORADO -->
+                    <div class="story-video-wrapper">
+                        <h4>Bastidores da Nossa Cozinha</h4>
+                        <h5>Padrão de Qualidade e Recheio Farto</h5>
+                        <h6>Fritura artesanal na hora para garantir crocância máxima</h6>
+                        <video class="story-video" controls preload="metadata" poster="imagens/pastel-carne.jpg">
+                            <source src="videos/preparo-pastel.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo HTML5.
+                        </video>
+                    </div>
+
+                    <div class="stores-cards-grid">
+                        <article class="store-card">
+                            <div class="store-card-header">
+                                <i class="fa-solid fa-store"></i>
+                                <h3>Loja 1 — Matriz Monte Cristo</h3>
+                            </div>
+                            <p>Rua Adão Soares da Silva, 347 • Jd. Monte Cristo (Em frente à creche Douglas Andreani)</p>
+                            <p><strong>Destaque:</strong> Atendimento completo no salão, ambiente aconchegante para a sua comodidade.</p>
+                            <span class="store-tag"><i class="fa-solid fa-wheelchair"></i> 100% Acessível</span>
+                        </article>
+
+                        <article class="store-card">
+                            <div class="store-card-header">
+                                <i class="fa-solid fa-bolt"></i>
+                                <h3>Loja 2 — Centro Delivery</h3>
+                            </div>
+                            <p>Av. Amílton Alves de Souza, 400 • Jardim Nossa Sra. de Lourdes, Campinas - SP, 13051-560</p>
+                            <p><strong>Destaque:</strong> Hub exclusivo de despacho rápido e retirada expressa para entregas ultraágeis.</p>
+                            <span class="store-tag store-tag-blue">
+                                <i class="fa-solid fa-truck-fast"></i> Despacho Ágil
+                            </span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CALCULADORA INTERATIVA DE EVENTOS & ENCOMENDAS B2B -->
+        <section id="encomendas" class="b2b-section">
+            <div class="container">
+                <div class="b2b-card">
+                    <div class="section-header" style="margin-bottom: 30px;">
+                        <span class="badge-pill"><i class="fa-solid fa-briefcase"></i> Soluções B2B &amp; Eventos</span>
+                        <h2 style="margin-top: 8px;">Encomendas para Festas &amp; Empresas</h2>
+                        <p>Faça a alegria da sua equipe ou convidados com nossas porções de mini pastéis e nossas bebidas frescas.</p>
+                    </div>
+
+                    <div class="b2b-grid">
+                        <div class="calc-box">
+                            <h3 class="font-heading calc-heading">
+                                <i class="fa-solid fa-calculator"></i> Calculadora Automática de Festa
+                            </h3>
+                            <p class="calc-subtext">
+                                Informe a quantidade de convidados para receber uma sugestão instantânea de consumo:
+                            </p>
+
+                            <div class="form-group">
+                                <label for="numPessoas">Número de Pessoas/Convidados:</label>
+                                <input type="number" id="numPessoas" class="form-control" value="20" min="5" max="500">
+                            </div>
+
+                            <div class="calc-result-card">
+                                <div class="calc-result-title"><i class="fa-solid fa-lightbulb"></i> Recomendação Sugerida:</div>
+                                <div class="calc-result-item">
+                                    <i class="fa-solid fa-cookie-bite"></i> 
+                                    <span><strong>Mini Pastéis:</strong> <span id="resPasteis">120</span> unidades (Aprox. 6 por pessoa)</span>
+                                </div>
+                                <div class="calc-result-item">
+                                    <i class="fa-solid fa-bottle-water"></i> 
+                                    <span><strong>Bebidas:</strong> <span id="resCaldo">6.0</span> Litros (Aprox. 300ml por pessoa)</span>
+                                </div>
+                            </div>
+
+                            <!-- TABELA ESTRUTURADA (<thead>, <tbody>, colspan) -->
+                            <div class="table-responsive-wrapper">
+                                <h4 class="table-title">Tabela Referência de Combos para Eventos</h4>
+                                <table class="b2b-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Porte do Evento</th>
+                                            <th>Mini Pastéis</th>
+                                            <th>Bebidas Sugeridas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Reunião (10 pessoas)</td>
+                                            <td>60 unidades</td>
+                                            <td>3 Litros</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Festa Média (30 pessoas)</td>
+                                            <td>180 unidades</td>
+                                            <td>9 Litros</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Corporativo (50 pessoas)</td>
+                                            <td>300 unidades</td>
+                                            <td>15 Litros</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="table-highlight-cell">
+                                                <strong>Pedidos acima de 500 unidades:</strong> Desconto especial e fritadeira dedicada sob consulta!
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-heading form-heading">
+                                Solicitar Cotação / Agendamento
+                            </h3>
+                            <form id="b2bForm" action="#encomendas" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="b2bNome">Nome Completo / Responsável *</label>
+                                    <input type="text" id="b2bNome" name="b2bNome" class="form-control" placeholder="Ex: Camila Silva" minlength="3" maxlength="80" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="b2bTelefone">WhatsApp / Telefone com DDD *</label>
+                                    <input type="tel" id="b2bTelefone" name="b2bTelefone" class="form-control" placeholder="(19) 99999-9999" minlength="10" maxlength="15" pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" title="Informe um telefone válido com DDD, ex: (19) 99999-9999" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="b2bEmail">E-mail Corporativo / Contato *</label>
+                                    <input type="email" id="b2bEmail" name="b2bEmail" class="form-control" placeholder="empresa@dominio.com.br" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="b2bTipoEvento">Tipo de Evento *</label>
+                                    <select id="b2bTipoEvento" name="b2bTipoEvento" class="form-control" required>
+                                        <option value="Aniversário / Festa Particular">Aniversário / Festa Particular</option>
+                                        <option value="Coffee Break Corporativo">Coffee Break Corporativo</option>
+                                        <option value="Confraternização de Equipe">Confraternização de Equipe</option>
+                                        <option value="Outro Evento">Outro Evento</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="b2bData">Data Pretendida do Evento *</label>
+                                    <input type="date" id="b2bData" name="b2bData" class="form-control" required>
+                                </div>
+
+                                <!-- ESCOLHA ÚNICA (radio) -->
+                                <div class="form-group">
+                                    <span class="field-group-label">Modalidade de Recebimento *</span>
+                                    <div class="inline-options-group">
+                                        <label class="option-label" for="modEntrega">
+                                            <input type="radio" id="modEntrega" name="b2bModalidade" value="Entrega no Local do Evento" checked>
+                                            <span>Entrega no Local</span>
+                                        </label>
+                                        <label class="option-label" for="modRetirada">
+                                            <input type="radio" id="modRetirada" name="b2bModalidade" value="Retirada na Matriz">
+                                            <span>Retirada na Matriz</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- ESCOLHA MÚLTIPLA (checkbox) -->
+                                <div class="form-group">
+                                    <span class="field-group-label">Itens de Interesse no Combo:</span>
+                                    <div class="inline-options-group">
+                                        <label class="option-label" for="chkSalgados">
+                                            <input type="checkbox" id="chkSalgados" name="b2bPreferencias" value="Mini Pastéis Salgados" checked>
+                                            <span>Pastéis Salgados</span>
+                                        </label>
+                                        <label class="option-label" for="chkDoces">
+                                            <input type="checkbox" id="chkDoces" name="b2bPreferencias" value="Mini Pastéis Doces">
+                                            <span>Pastéis Doces</span>
+                                        </label>
+                                        <label class="option-label" for="chkBebidas">
+                                            <input type="checkbox" id="chkBebidas" name="b2bPreferencias" value="Sucos e Bebidas">
+                                            <span>Sucos/Bebidas</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- ENVIO DE ARQUIVO (file) -->
+                                <div class="form-group">
+                                    <label for="b2bArquivo">Anexar Lista de Sabores ou Logo (PDF/Imagem - Opcional)</label>
+                                    <input type="file" id="b2bArquivo" name="b2bArquivo" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="b2bDesc">Detalhes da Quantidade e Sabores Desejados</label>
+                                    <textarea id="b2bDesc" name="b2bDesc" class="form-control" rows="3" minlength="5" placeholder="Ex: Preciso de 150 mini pastéis variados e 8L de suco natural para as 15h."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-red" style="width: 100%;">
+                                    <i class="fa-solid fa-paper-plane"></i> Enviar Solicitação B2B via WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ COMPLETO -->
+    <footer id="contato" class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ÊTA PASTEL</h3>
+                    <p class="footer-desc">
+                        O pioneiro e legítimo pastel gigante de 30cm em Campinas - SP. Fartura, sabor e crocância sem igual desde 2021.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Loja 1 (Monte Cristo)</h4>
+                    <div class="footer-info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Rua Adão Soares da Silva, 347<br>Jd. Monte Cristo, Campinas - SP<br>(Em frente à creche Douglas Andreani)</span>
+                    </div>
+                    <div class="footer-info-item">
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <span>Possui Rampa de Acessibilidade Física</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=Rua+Adao+Soares+da+Silva+347+Campinas" 
+                       target="_blank" rel="noopener noreferrer" class="footer-map-link">
+                        <i class="fa-solid fa-map-location-dot"></i> Traçar Rota no Google Maps
+                    </a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Loja 2 (Jd. Nossa Sra. de Lourdes)</h4>
+                    <div class="footer-info-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Av. Amílton Alves de Souza, 400<br>Centro Delivery Expresso — Campinas - SP</span>
+                    </div>
+                    <div class="footer-info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Terça a Domingo: 16h00 às 23h30<br><strong>Segunda-feira: Fechado</strong></span>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento Oficial</h4>
+                    <div class="footer-info-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>(19) 99909-2169</span>
+                    </div>
+                    <a href="https://wa.me/5519999092169?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." 
+                       target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-footer-cta">
+                        Falar com Atendente
+                    </a>
+                    <a href="politica.html" class="footer-map-link" style="margin-top: 12px;">
+                        <i class="fa-solid fa-shield-halved"></i> Política de Privacidade
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Êta Pastel — Todos os direitos reservados. Campinas - SP.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WIDGET FLUTUANTE DE CARRINHO (À DIREITA) -->
+    <div class="cart-float-bar" id="cartFloatBar" style="display: none;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-cart-shopping" style="font-size: 1.3rem;"></i>
+            <div class="cart-badge-count" id="cartBadgeCount">0</div>
+        </div>
+        <div class="cart-float-total">
+            <span>Ver Pedido: </span><span id="cartFloatTotal">R$ 0,00</span>
+        </div>
+    </div>
+
+    <!-- MODAL DE RESUMO DO PEDIDO -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeCartModalBtn" aria-label="Fechar pedido"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title font-title">Seu Pedido Êta Pastel</h3>
+            
+            <ul class="cart-items-list" id="cartItemsList"></ul>
+
+            <div class="cart-summary-total">
+                <span>Total Estimado:</span>
+                <span class="text-primary" id="cartModalTotal">R$ 0,00</span>
+            </div>
+
+            <div class="form-group">
+                <label for="clienteNome">Seu Nome *</label>
+                <input type="text" id="clienteNome" class="form-control" placeholder="Digite seu nome para o pedido">
+            </div>
+
+            <div class="form-group">
+                <label for="tipoEntrega">Opção de Entrega / Retirada *</label>
+                <select id="tipoEntrega" class="form-control">
+                    <option value="Delivery em Casa">Entrega Delivery (Campinas)</option>
+                    <option value="Retirada Matriz Monte Cristo">Retirar na Loja 1 (Monte Cristo)</option>
+                    <option value="Retirada Centro Delivery">Retirar na Loja 2 (Centro Delivery)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="obsPedido">Observações ou Adicionais</label>
+                <input type="text" id="obsPedido" class="form-control" placeholder="Ex: Tirar azeitona, maionese extra, etc.">
+            </div>
+
+            <button id="finalizarWhatsAppBtn" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Finalizar e Enviar via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- TOAST DE NOTIFICAÇÃO -->
+    <div class="toast-msg" id="toastMsg">
+        <i class="fa-solid fa-circle-check" style="color: #4CAF50;"></i>
+        <span id="toastText">Item adicionado com sucesso!</span>
+    </div>
+
+    <!-- Scripts Separados -->
+    <script src="js/app.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
